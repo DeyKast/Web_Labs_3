@@ -1,21 +1,17 @@
 console.warn("Tasks 1.2.12 - 1.2.31");
 
-
 class Square {
   constructor(a) {
-
     this.a = a;
   }
 
   static help() {
-
     console.log(
       "Square - це чотирикутник, у якого всі сторони рівні та всі кути прямі."
     );
   }
 
   length() {
-
     console.log(`Сума довжин сторін: ${this.a * 4}`);
   }
 
@@ -34,10 +30,8 @@ class Square {
   }
 }
 
-
 class Rectangle extends Square {
   constructor(a, b) {
-    // 1.2.17
     super(a);
     this.b = b;
   }
@@ -67,10 +61,8 @@ class Rectangle extends Square {
   }
 }
 
-
 class Rhombus extends Square {
   constructor(a, alpha, beta) {
-    // 1.2.19
     super(a);
     this.alpha = alpha;
     this.beta = beta;
@@ -105,10 +97,8 @@ class Rhombus extends Square {
   }
 }
 
-
 class Parallelogram extends Rectangle {
   constructor(a, b, alpha, beta) {
-    // 1.2.21
     super(a, b);
     this.alpha = alpha;
     this.beta = beta;
@@ -138,7 +128,6 @@ class Parallelogram extends Rectangle {
     );
   }
 }
-
 
 Object.defineProperties(Rhombus.prototype, {
   a: {
@@ -172,7 +161,6 @@ Rectangle.help();
 Rhombus.help();
 Parallelogram.help();
 
-
 const square = new Square(5);
 square.info();
 
@@ -185,23 +173,19 @@ rhombus.info();
 const parallelogram = new Parallelogram(6, 8, 120, 60);
 parallelogram.info();
 
-
 function Triangular(a = 3, b = 4, c = 5) {
   return { a, b, c };
 }
 
-
 console.log(Triangular());
 console.log(Triangular(7, 24, 25));
 console.log(Triangular(8, 15, 17));
-
 
 function PiMultiplier(factor) {
   return function () {
     return Math.PI * factor;
   };
 }
-
 
 const multiplyBy2 = PiMultiplier(2);
 const multiplyBy1_5 = PiMultiplier(1.5);
@@ -210,7 +194,6 @@ const divideBy2 = PiMultiplier(0.5);
 console.log(multiplyBy2());
 console.log(multiplyBy1_5());
 console.log(divideBy2());
-
 
 function Painter(color) {
   return function (object) {
@@ -222,11 +205,9 @@ function Painter(color) {
   };
 }
 
-
 const PaintBlue = Painter("Blue");
 const PaintRed = Painter("Red");
 const PaintYellow = Painter("Yellow");
-
 
 const obj1 = { maxSpeed: 280, type: "Truck" };
 const obj2 = { maxSpeed: 180, type: "Sportcar", color: "purple" };
